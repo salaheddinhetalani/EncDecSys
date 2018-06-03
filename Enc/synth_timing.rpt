@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Encryptor
+Version: M-2016.12-SP5
+Date   : Mon Nov 27 16:48:53 2017
+****************************************
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+  Startpoint: nextMode_reg
+              (rising edge-triggered flip-flop clocked by master_clock)
+  Endpoint: perBit0currentMode_reg_0_
+            (rising edge-triggered flip-flop clocked by master_clock)
+  Path Group: master_clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Encryptor          10k                   c35_CORELIB_WC
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock master_clock (rise edge)           0.00       0.00
+  clock network delay (ideal)              2.50       2.50
+  nextMode_reg/C (DFEC1)                   0.00       2.50 r
+  nextMode_reg/QN (DFEC1)                  2.67       5.17 r
+  U937/Q (NOR21)                           1.79       6.96 f
+  U936/Q (BUF2)                            1.93       8.89 f
+  perBit0currentMode_reg_0_/E (DFEC1)      0.00       8.89 f
+  data arrival time                                   8.89
+
+  clock master_clock (rise edge)          12.50      12.50
+  clock network delay (ideal)              2.50      15.00
+  clock uncertainty                       -1.00      14.00
+  perBit0currentMode_reg_0_/C (DFEC1)      0.00      14.00 r
+  library setup time                      -0.73      13.27
+  data required time                                 13.27
+  -----------------------------------------------------------
+  data required time                                 13.27
+  data arrival time                                  -8.89
+  -----------------------------------------------------------
+  slack (MET)                                         4.38
+
+
+1

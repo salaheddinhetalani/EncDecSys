@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Decryptor
+Version: M-2016.12-SP5
+Date   : Mon Nov 27 20:01:52 2017
+****************************************
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+  Startpoint: decPer_reg_1_
+              (rising edge-triggered flip-flop clocked by master_clock)
+  Endpoint: decShift_reg_0_
+            (rising edge-triggered flip-flop clocked by master_clock)
+  Path Group: master_clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Decryptor          10k                   c35_CORELIB_WC
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock master_clock (rise edge)           0.00       0.00
+  clock network delay (ideal)              2.50       2.50
+  decPer_reg_1_/C (DFEC1)                  0.00       2.50 r
+  decPer_reg_1_/QN (DFEC1)                 2.51       5.01 r
+  U2097/Q (INV3)                           0.52       5.53 f
+  U1985/Q (AOI211)                         0.81       6.34 r
+  U2064/Q (OAI311)                         0.49       6.83 f
+  U1959/Q (NOR31)                          1.11       7.94 r
+  U1942/Q (NAND21)                         0.67       8.61 f
+  U1978/Q (INV3)                           0.43       9.04 r
+  U1940/Q (AOI220)                         0.70       9.74 f
+  U1814/Q (OAI212)                         0.47      10.21 r
+  decShift_reg_0_/D (DFEC1)                0.00      10.21 r
+  data arrival time                                  10.21
+
+  clock master_clock (rise edge)           9.00       9.00
+  clock network delay (ideal)              2.50      11.50
+  clock uncertainty                       -1.00      10.50
+  decShift_reg_0_/C (DFEC1)                0.00      10.50 r
+  library setup time                      -0.28      10.22
+  data required time                                 10.22
+  -----------------------------------------------------------
+  data required time                                 10.22
+  data arrival time                                 -10.21
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+1

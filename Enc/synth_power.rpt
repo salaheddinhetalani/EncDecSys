@@ -1,0 +1,56 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Encryptor
+Version: M-2016.12-SP5
+Date   : Mon Nov 27 16:48:53 2017
+****************************************
+
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /opt/cad/designkits/ams/v410/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Encryptor              10k               c35_CORELIB_WC
+
+
+Global Operating Voltage = 3    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   2.3251 mW   (88%)
+  Net Switching Power  = 309.6759 uW   (12%)
+                         ---------
+Total Dynamic Power    =   2.6347 mW  (100%)
+
+Cell Leakage Power     = 990.5844 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           2.1770            0.1245        7.2347e+05            2.3022  (  87.35%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.1481            0.1851        2.6711e+05            0.3335  (  12.65%)
+--------------------------------------------------------------------------------------------------
+Total              2.3251 mW         0.3097 mW     9.9058e+05 pW         2.6357 mW
+1

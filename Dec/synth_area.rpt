@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : Decryptor
+Version: M-2016.12-SP5
+Date   : Mon Nov 27 20:01:52 2017
+****************************************
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /opt/cad/designkits/ams/v410/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+Number of ports:                           47
+Number of nets:                           432
+Number of cells:                          353
+Number of combinational cells:            292
+Number of sequential cells:                61
+Number of macros/black boxes:               0
+Number of buf/inv:                         60
+Number of references:                      36
+
+Combinational area:              20438.600372
+Buf/Inv area:                     2238.600082
+Noncombinational area:           21111.999359
+Macro/Black Box area:                0.000000
+Net Interconnect area:            9450.000000
+
+Total cell area:                 41550.599731
+Total area:                      51000.599731
+1

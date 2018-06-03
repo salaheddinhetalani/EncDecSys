@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : EncDecSys
+Version: M-2016.12-SP5
+Date   : Mon Nov 27 22:04:10 2017
+****************************************
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+  Startpoint: dec_decPer_reg_2_
+              (rising edge-triggered flip-flop clocked by master_clock)
+  Endpoint: dec_decShift_reg_3_
+            (rising edge-triggered flip-flop clocked by master_clock)
+  Path Group: master_clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  EncDecSys          10k                   c35_CORELIB_WC
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock master_clock (rise edge)           0.00       0.00
+  clock network delay (ideal)              2.50       2.50
+  dec_decPer_reg_2_/C (DFEC1)              0.00       2.50 r
+  dec_decPer_reg_2_/Q (DFEC1)              2.24       4.74 r
+  U650/Q (AOI211)                          0.90       5.63 f
+  U574/Q (INV3)                            0.49       6.12 r
+  U640/Q (NAND31)                          0.28       6.40 f
+  U639/Q (NAND42)                          1.16       7.55 r
+  U552/Q (INV3)                            0.51       8.06 f
+  U558/Q (NAND22)                          0.66       8.72 r
+  U331/Q (OAI222)                          0.30       9.03 f
+  U555/Q (AOI221)                          0.42       9.45 r
+  U553/Q (OAI2111)                         0.34       9.79 f
+  dec_decShift_reg_3_/D (DFEC1)            0.00       9.79 f
+  data arrival time                                   9.79
+
+  clock master_clock (rise edge)          12.50      12.50
+  clock network delay (ideal)              2.50      15.00
+  clock uncertainty                       -1.00      14.00
+  dec_decShift_reg_3_/C (DFEC1)            0.00      14.00 r
+  library setup time                      -0.36      13.64
+  data required time                                 13.64
+  -----------------------------------------------------------
+  data required time                                 13.64
+  data arrival time                                  -9.79
+  -----------------------------------------------------------
+  slack (MET)                                         3.85
+
+
+1
