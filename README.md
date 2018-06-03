@@ -36,5 +36,5 @@ This block is designed to work as a pipeline, the decryptor block consists also 
 ## Parameters of the final design
 
 |      Area     | Dynamic Power | Leakage Power  | Operation Frequency |
-| ------------- | ------------- | -------------- | ------------------- |
+| :-----------: | :-----------: | :------------: | :-----------------: |
 | 110892.998459 |   4.2432 mW   |    1.8950 uW   |       80 MHZ        |
